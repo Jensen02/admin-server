@@ -4,7 +4,7 @@
  * @Github: https://github.com/Jensen02
  * @Date: 2019-09-11 14:37:42
  * @LastEditors: Jensen
- * @LastEditTime: 2019-09-11 20:50:56
+ * @LastEditTime: 2019-09-11 22:58:32
  */
 
 const Router = require('koa-router')
@@ -30,10 +30,8 @@ userRoute.post('/create', async (ctx, next) => {
 userRoute.get('/user_list', async (ctx, next) => {
   let limit = ctx.query.limit,
       offset = ctx.query.offset;
-  getAllUsers(parseInt(limit), parseInt(offset)).then(res => {
-    console.log(res);
-  })
-  // ctx.responseData(200, '获取用户列表成功!', res);
+  const res = await getAllUsers(parseInt(limit), parseInt(offset));
+  ctx.responseData(200, '获取用户列表成功!', res);
 })
 
 module.exports = userRoute
