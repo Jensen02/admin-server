@@ -4,7 +4,7 @@
  * @Github: https://github.com/Jensen02
  * @Date: 2019-09-11 01:23:19
  * @LastEditors: Jensen
- * @LastEditTime: 2019-09-11 23:01:58
+ * @LastEditTime: 2019-09-17 18:20:43
  */
 
 const { BIGINT, STRING, DATE } = require('sequelize')
